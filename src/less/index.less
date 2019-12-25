@@ -1,0 +1,18 @@
+@import './config.less';
+*{ box-sizing: border-box; } 
+html, body {margin: 0;padding: 0;font-size: @font-size;font-family: @font-family;min-width: @min-width;height: 100%;background-color: @bg-color;}
+ul,ol,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd,input,textarea,select,option,button {margin: 0;padding: 0;list-style: none;outline: none;}
+img {vertical-align: middle;}
+a {color: #333;text-decoration: none;}
+a:hover, a.hover {text-decoration: none;}
+.inlinBlock {._display()}
+.clear {clear: both;}
+.lf {float: left;}
+.rt {float: right;}
+.left {text-align: left;}
+.right {text-align: right;}
+.none {._display(none)}
+.block {._display(block)}
+#app {max-width: 100%;min-width: @min-width;height: 100%;}
+.svg-icon {width: 1em;height: 1em;vertical-align: -0.15em;fill: currentColor;overflow: hidden;} //svg小图标的样式
+

@@ -1,0 +1,16 @@
+/**
+* 全局样式的配置文件
+*/
+
+/* 定义全局所有变量 */ 
+@font-size: 14px;  
+@font-family: "PingFang SC","Microsoft YaHei",Arial,"宋体" !important;
+@primary-color: rgba(40,127,239,1); //logo色值
+@bg-color: rgba(248,248,248,1); //主要的背景颜色
+@font-color-a: #333333; //
+@min-width: 1300px; //页面能够兼容的最小宽度
+
+/* 定义全局所有函数 */
+.border-radius(@radius: 5px) { -webkit-border-radius: @radius; -moz-border-radius:@radius; border-radius: @radius; } //定义圆角
+.level-center() { display: flex;display: -webkit-flex;align-items:center;justify-content:center; } //定义一个盒子，其子元素水平居中
+._display(@d: 'inline-block') { display: @d; } //定义行内块属性
