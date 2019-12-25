@@ -1,14 +1,18 @@
-基于webpack4.x 多入口，多页面项目构建案例
+# 基于webpack4.x 多入口，多页面项目构建案例
 webpack4.x 构建多页面工程解决方案
-
 多入口文件，自动构建入口，支持多页面型的项目
 支持js、css、less等代码编译、兼容、压缩混淆、打包抽离、构建等
 ES6等新语法转译
 扩展方便、开箱即用
-安装依赖
-$ npm install
 
-目录结构说明
+## 安装依赖
+```
+$ npm install
+```
+
+## 目录结构说明
+
+``` js
     .
     ├── build                     # 配置规则
     │   ├── config.js               # 工程扩展配置
@@ -37,11 +41,26 @@ $ npm install
     ├── package.json              
     ├── README.md                 
     ├── postcss.config.js         #CSS自动兼容配置
-添加页面说明：
+```
+
+## 添加页面说明：
+```
 pages下面一个文件夹既是一个单独的页面，其中.html、.js、.less文件名称与页面文件夹保持一致
-编译开发环境代码，会对js/less进行编译抽离成单独的文件，但不会压缩代码，并自动在html文件中引入
+```
+
+## 编译开发环境代码
+会对js/less进行编译抽离成单独的文件，但不会压缩代码，并自动在html文件中引入
+```
 $ npm run dev
-编译开发环境并启动 webpack-dev-server 服务
+```
+
+## 编译开发环境并启动 webpack-dev-server 服务
+```
 $ npm run serve
-编译生产环境，会压缩混淆代码
+```
+
+## 编译生产环境
+会对js/less进行编译混淆并压缩代码，抽离成单独的文件，并自动在html文件中引入
+```
 $ npm run build
+```
