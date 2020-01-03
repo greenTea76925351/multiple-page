@@ -12,7 +12,7 @@ function readFileList (dir, fileList) {
     const stat = fs.statSync(fullPath);
     if (stat.isDirectory()) {
       fileList[file] = { html: '', js: '', less: '' }
-      readFileList(fullPath,fileList)
+      readFileList(fullPath, fileList)
     } else {
       let h = file.split('.')[1], filename = file.replace('.' + h, '');
         fileList[filename][h] = fullPath;
