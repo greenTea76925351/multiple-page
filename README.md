@@ -1,8 +1,8 @@
 # 基于webpack4.x 多入口，多页面项目构建案例
-webpack4.x 构建多页面工程解决方案
-多入口文件，自动构建入口，支持多页面型的项目
-支持js、css、less等代码编译、兼容、压缩混淆、打包抽离、构建等
-ES6等新语法转译
+webpack4.x 构建多页面工程解决方案；
+多入口文件，自动构建入口，支持多页面型的项目；
+支持js、ejs、css、less等代码编译、兼容、压缩混淆、打包抽离、剔除无用代码、
+页头页尾等公共部分用ejs模板分离、ES6等新语法转译、一键打包等；
 扩展方便、开箱即用
 
 ## 安装依赖
@@ -14,23 +14,24 @@ $ npm install
 
 ``` js
     .
-    ├── build                     # 配置规则
+    ├── build/                    # 配置规则
     │   ├── config.js               # 工程扩展配置
     │   ├── webpack.base.conf.js    # webpack基础配置
     │   ├── webpack.dev.conf.js     # 开发环境webpack配置入口
     │   ├── webpack.prod.conf.js    # 生产环境webpack配置入口
-    ├── src                       # 源码目录
+    ├── src/                      # 源码目录
     │   ├── assets/                 # 公共静态资源
     │   │   ├── images/               # 图片资源
-    │   ├── less                    # less目录
+    │   ├── common/                 # 公共html模板目录
+    │   ├── less/                   # less目录
     │   │   ├── config.less           # 定义全局公用的变量、函数
     │   │   ├── index.less            # 全局公用的样式文件
-    │   ├── pages/                  # 页面文件
-    │   │   ├── index                 # 首页文件夹
+    │   ├── pages/                  # 页面目录
+    │   │   ├── index/                # 首页文件夹
     │   │   │    ── index.html           html模板文件
     │   │   │    ── index.js            # js文件
     │   │   │    ── index.less          # less文件
-    │   │   ├── login                 # 登录页面文件夹
+    │   │   ├── login/                # 登录页面文件夹
     │   │   │    ── login.html          # html模板文件
     │   │   │    ── login.js            # js文件
     │   │   │    ── login.less          # less文件
