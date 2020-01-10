@@ -1,0 +1,16 @@
+{
+  "title": {
+    "isUpdate": true,
+    "text": "登录页面"
+  },
+  "components": [
+    {
+      "header": "/header/header.html",
+      "isUpdate": true
+    },
+    {
+      "footer": "/footer/footer.html",
+      "isUpdate": true
+    }
+  ]
+}

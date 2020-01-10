@@ -1,10 +1,11 @@
 const { resolve } = require('path')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin"); //将css抽离为独立css文件
+const htmlWebpackPlugin = require("html-webpack-plugin"); //在打包结束后，自动生成一个html文件，并把打包生成的js模块引入到该html中
 
 module.exports = {
   src: '../src', 
   views: '../src/pages', //html模板目录
-  // publicPath: '../', //静态资源服务器
+  // publicPath: 'assets/', //静态资源服务器
   output:{ //出口配置项
     dev: resolve(__dirname, '../devDist'), //开发环境打包出口
     pro: resolve(__dirname, '../proDist'), //生产环境打包出口
@@ -32,5 +33,4 @@ module.exports = {
   ],
   devPlugins:[], //用于开发环境的插件
   proPlugins:[], //用于生成环境的插件
-  favicon: '../src/assets/favicon.ico' 
 }

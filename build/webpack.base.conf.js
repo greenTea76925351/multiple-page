@@ -36,15 +36,19 @@ module.exports = {
         include: resolve(__dirname, src), //指定目标文件夹，缩小搜索范围
       },
       {
-        test: /\.(html)$/,
-        include: resolve(__dirname, src), //指定目标文件夹，缩小搜索范围
-        use: {
-          loader: 'html-loader',
-          options: {
-            attrs: ['img:src'],//此处的参数值  img是指html中的 <img/> 标签， src是指 img的src属性   表示 html-loader 作用于 img标签中的 src的属性
-          }
-        }
+        test: /\.ejs$/,
+        loader: "ejs-loader"
       }
+      // {
+      //   test: /\.(html)$/,
+      //   include: resolve(__dirname, src), //指定目标文件夹，缩小搜索范围
+      //   use: {
+      //     loader: 'html-loader',
+      //     options: {
+      //       attrs: ['img:src'],//此处的参数值  img是指html中的 <img/> 标签， src是指 img的src属性   表示 html-loader 作用于 img标签中的 src的属性
+      //     }
+      //   }
+      // }
     ]
   },
   resolve: {
@@ -54,6 +58,7 @@ module.exports = {
     },
     extensions: [".js"], //! 如果引入文件没有带后缀，会自动匹配对应的后缀，默认只支持 js、json; 配置项越多，打包速度越慢;
   },
+  devtool: 'source-map', //源代码与打包后的代码的映射关系,方便调试
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({ //打包抽离css文件

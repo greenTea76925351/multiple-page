@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>webpack4.x多页面打包通用方案</title>
     <!-- 新 Bootstrap4 核心 CSS 文件 -->
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="shortcut icon" href="../../assets/images/favicon.ico" type="image/x-icon">
 </head>
-
-
 <body>
     <!-- 头部 -->
     <%= require('../../common/header.ejs')() %>
     <div id="app">
         <div>首页</div>
         <a href="/pages/login.html">登录</a>
-        <a href="/pages/about.html">关于我们</a>
+        <a href="/pages/index.html">首页</a>
     </div>
     <!-- 底部 -->
     <%= require('../../common/footer.ejs')() %>
@@ -29,5 +26,4 @@
     <!-- 引入自己定义的 js -->
     <script src="/assets/js/public.js"></script>
 </body>
-
 </html>
