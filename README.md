@@ -49,6 +49,17 @@ $ npm install
 pages下面一个文件夹既是一个单独的页面，其中.html、.js、.less文件名称与页面文件夹保持一致
 ```
 
+## 引入公共的 ejs 模板
+```
+    <!-- 页头 -->
+    <%= require('../../common/header.ejs')() %>
+    <div id="app">
+        ...
+    </div>
+    <!-- 页尾 -->
+    <%= require('../../common/footer.ejs')() %>
+```
+
 ## 编译开发环境代码
 会对js/less进行编译抽离成单独的文件，但不会压缩代码，并自动在html文件中引入
 ```
